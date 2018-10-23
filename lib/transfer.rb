@@ -36,12 +36,13 @@ class Transfer
   end
 
   def reverse_transfer
-    binding.pry
-    # if @@all.last.status == "complete"
-    #   sender.balance += self.all.last.amount
-    #   receiver.balance -= sender.balance += self.all.last.amount
-    #   @status = "reversed"
-    # end
+    if @status == "complete"
+      sender.deposit(@amount)
+      receiver.balance -= @amount
+      @status = "reversed"
+    else
+      nil
+    end       
   end
 
 end
