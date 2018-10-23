@@ -1,8 +1,8 @@
 class Transfer
   # your code here
 
-  attr_accessor :sender, :receiver, :amount, :status, :last_transaction
-  
+  attr_accessor :sender, :receiver, :amount, :status
+
   @@all = []
 
   def initialize(sender, receiver, amount)
@@ -10,7 +10,6 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
-    @last_transaction = []
   end
 
   def self.all
