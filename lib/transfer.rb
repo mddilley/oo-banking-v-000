@@ -18,7 +18,7 @@ class Transfer
   end
 
   def save
-    self.all << self
+    all << self
   end
 
   def valid?
