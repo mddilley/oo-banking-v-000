@@ -11,7 +11,6 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
-    @last_transaction = []
   end
 
   def self.all
@@ -36,7 +35,7 @@ class Transfer
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
-    @last_transaction << self
+    save
   end
 
   def reverse_transfer
