@@ -26,6 +26,7 @@ class Transfer
   def execute_transaction
     if self.valid? && @status = "pending"
       save
+      binding.pry
       sender.balance -= @amount
       receiver.deposit(@amount)
       @status = "complete"
@@ -37,7 +38,7 @@ class Transfer
   end
 
   def reverse_transfer
-    binding.pry
+    
     # if @@all.last.status == "complete"
     #   sender.balance += self.all.last.amount
     #   receiver.balance -= sender.balance += self.all.last.amount
