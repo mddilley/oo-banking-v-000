@@ -40,7 +40,7 @@ class Transfer
   end
 
   def reverse_transfer
-    #binding.pry
+    binding.pry
     # if @@all.last.status == "complete"
     #   sender.balance += self.all.last.amount
     #   receiver.balance -= sender.balance += self.all.last.amount
