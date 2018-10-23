@@ -35,7 +35,7 @@ class Transfer
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
-    #save
+    @last_transaction << self
   end
 
   def reverse_transfer
