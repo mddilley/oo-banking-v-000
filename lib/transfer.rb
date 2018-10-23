@@ -10,7 +10,7 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
-    @last_transaction
+    @last_transaction = []
   end
 
   def self.all
